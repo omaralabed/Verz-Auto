@@ -1,0 +1,404 @@
+:root {
+  --ink: #111827;
+  --muted: #5b6472;
+  --line: #d7dde5;
+  --surface: #ffffff;
+  --panel: #f7f8f5;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --gold: #d97706;
+  --blue: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--surface);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0 40px;
+}
+
+.brand,
+nav,
+.score-row,
+.panel-header,
+.price-range {
+  align-items: center;
+  display: flex;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 800;
+  gap: 10px;
+}
+
+.brand-mark {
+  align-items: center;
+  background: var(--ink);
+  border-radius: 8px;
+  color: white;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+nav {
+  color: var(--muted);
+  font-size: 14px;
+  gap: 22px;
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(17, 24, 39, 0.86), rgba(17, 24, 39, 0.36)),
+    url("https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1800&q=80");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  min-height: calc(100vh - 72px);
+  padding: 88px 40px 72px;
+}
+
+.hero-copy {
+  align-self: center;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #8ee7d8;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(64px, 10vw, 128px);
+  line-height: 0.9;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.hero-copy p:not(.eyebrow),
+.assistant-copy p:not(.eyebrow),
+.section-heading p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 680px;
+}
+
+.search-panel {
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 680px;
+  padding: 10px;
+}
+
+.search-panel svg {
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.search-panel input {
+  border: 0;
+  color: var(--ink);
+  flex: 1;
+  font-size: 16px;
+  min-width: 0;
+  outline: 0;
+}
+
+button {
+  background: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 44px;
+  padding: 0 20px;
+}
+
+.market-snapshot {
+  align-self: end;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 8px;
+  color: var(--ink);
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.market-snapshot div {
+  background: white;
+  padding: 24px;
+}
+
+.market-snapshot span {
+  display: block;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.market-snapshot p,
+.listing-card p,
+.ops-item span,
+.assistant-panel li {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.section,
+.dealer-desk {
+  padding: 72px 40px;
+}
+
+.section-heading {
+  max-width: 760px;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.inventory-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.listing-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 210px;
+  overflow: hidden;
+}
+
+.vehicle-art {
+  align-items: end;
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.82), rgba(29, 78, 216, 0.7)),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 18px;
+  text-transform: uppercase;
+}
+
+.listing-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 22px;
+}
+
+.listing-meta {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listing-meta strong {
+  font-size: 28px;
+}
+
+.listing-meta span {
+  background: var(--panel);
+  border-radius: 6px;
+  color: var(--accent-strong);
+  font-size: 13px;
+  font-weight: 800;
+  padding: 8px 10px;
+}
+
+.score-row {
+  color: var(--blue);
+  font-weight: 800;
+  gap: 8px;
+}
+
+.assistant-band {
+  background: var(--ink);
+  color: white;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: minmax(0, 1fr) 440px;
+  padding: 72px 40px;
+}
+
+.assistant-copy {
+  align-self: center;
+  max-width: 760px;
+}
+
+.assistant-panel {
+  background: white;
+  border-radius: 8px;
+  color: var(--ink);
+  padding: 24px;
+}
+
+.panel-header,
+.price-range {
+  gap: 10px;
+  font-weight: 900;
+}
+
+.quality-meter {
+  background: #e5e7eb;
+  border-radius: 999px;
+  height: 12px;
+  margin: 24px 0;
+  overflow: hidden;
+}
+
+.quality-meter span {
+  background: linear-gradient(90deg, var(--gold), var(--accent));
+  display: block;
+  height: 100%;
+}
+
+.assistant-panel ul {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 24px;
+  padding-left: 20px;
+}
+
+.price-range {
+  background: var(--panel);
+  border-radius: 8px;
+  color: var(--accent-strong);
+  padding: 14px;
+}
+
+.ops-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.ops-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  min-height: 180px;
+  padding: 24px;
+}
+
+.ops-item svg {
+  color: var(--accent);
+}
+
+.ops-item strong {
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 22px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .hero,
+  .assistant-band,
+  .inventory-grid,
+  .ops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 64px 22px 36px;
+  }
+
+  .section,
+  .dealer-desk,
+  .assistant-band {
+    padding: 52px 22px;
+  }
+
+  .listing-card {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-art {
+    min-height: 180px;
+  }
+
+  .search-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-panel input {
+    min-height: 42px;
+    width: 100%;
+  }
+}
